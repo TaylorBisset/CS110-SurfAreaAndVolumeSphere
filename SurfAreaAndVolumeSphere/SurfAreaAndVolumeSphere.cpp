@@ -3,10 +3,24 @@
 
 #include <iostream>
 #include <cmath>
+#include <iomanip>
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    double radius;
+    double pi = 3.14159265;
+    cout << "Please enter the radius of the shpere: ";
+    cin >> radius;
+    cout << endl;
+
+    double surfaceArea = 4.0*pi*pow(radius,2);
+    double volumeSphere = (4.0/3.0)*pi*pow(radius,3);
+    cout << setprecision(2) << fixed;
+
+    cout << "The Surface Area of a sphere with a radius of " << radius << " is " << surfaceArea << "." << endl;
+    cout << "The Volume of a sphere with a radius of " << radius << " is " << volumeSphere << "." << endl << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
